@@ -11,6 +11,6 @@ public class VariavelComPontoFlutuante {
         Locale.setDefault(Locale.US);
         System.out.printf("%.4f%n", x);
         System.out.println("RESULTADO: " + x + " METROS"); 
-        System.out.printf("RESULTADO: %.2f%n", x, " METROS");
+        System.out.printf("RESULTADO: %.2f", x, " METROS%n");
     }
 }
