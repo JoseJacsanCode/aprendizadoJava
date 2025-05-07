@@ -6,13 +6,15 @@ public class Senha_E_nome {
         Scanner sc = new Scanner(System.in);
         
         boolean infosValidas = false;
+        String userName;
+        String senha;
 
         do{
             System.out.println("Entre com o nome do usuário: ");
-            String userName = sc.next();
+            userName = sc.next();
 
             System.out.println("Entre com a senha: ");
-            String senha = sc.next();
+            senha = sc.next();
 
             if(userName.equalsIgnoreCase(senha)) {
                 infosValidas = false;
