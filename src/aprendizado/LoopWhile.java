@@ -5,11 +5,12 @@ public class LoopWhile {
         int i = 1;
         int max = 10;
 
-        System.out.println("Contando até " + max);
-
+        System.out.println("Contando até 10");
         while (i <= max) {
             System.out.println("Valor de i: " + i);
             i++;
         }
+
+        System.out.println("Valor final de i: " + i);
     }
 }
