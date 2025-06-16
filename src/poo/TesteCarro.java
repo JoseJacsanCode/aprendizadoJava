@@ -6,7 +6,7 @@ public class TesteCarro {
         van.marca = "Fiat";
         van.modelo = "Ducato";
         van.numPassageiros = 10;
-        van.capCombustivel = 10;
+        van.capCombustivel = 100;
         van.consumoCombustivel = 0.2;
 
         System.out.println(van.marca);
@@ -15,7 +15,7 @@ public class TesteCarro {
         Carro fusca = new Carro();
         fusca.marca = "Volkswagen";
         fusca.modelo = "Fusca";
-        van.numPassageiros = 4;
+        fusca.numPassageiros = 4;
         fusca.capCombustivel = 30;
         fusca.consumoCombustivel = 0.15;
 

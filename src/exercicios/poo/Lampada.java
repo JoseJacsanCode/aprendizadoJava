@@ -1,12 +1,14 @@
 package exercicios.poo;
 
 public class Lampada {
-    String tipoDaLampada;
-    int potencia;
-    int fluxoLuminoso;
+    String marca;
+    String modelo;
     double preco;
+    int potencia;
+    int voltagem;
 }
 
+
 /*
- * Escreva uma classe para representar uma lâmpada que está à venda em um supermercado.	
+ * Escreva	uma	classe	para representar uma lâmpada	que	está à	venda	em um supermercado.
  */
