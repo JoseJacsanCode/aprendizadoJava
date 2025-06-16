@@ -1,11 +1,14 @@
 package exercicios.poo;
 
 public class Lampada {
-    String marca;
     String modelo;
-    double preco;
+    String tensao;
+    String cor;
+    String tipoLuz;
     int potencia;
-    int voltagem;
+    int garantiaMeses;
+    String[] tipos;
+    boolean tipoAbajur;
 }
 
 

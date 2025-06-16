@@ -1,10 +1,11 @@
 package exercicios.poo;
 
 public class ContaCorrente {
-    int numero;
+    String numero;
+    String agencia;
+    boolean especial;
+    double limiteChequeEspecial;
     double saldo;
-    String status;
-    double limite;
 }
 
 /*

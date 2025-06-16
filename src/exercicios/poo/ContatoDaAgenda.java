@@ -2,7 +2,7 @@ package exercicios.poo;
 
 public class ContatoDaAgenda {
     String nome;
-    String telefone;
+    String[] telefones;
     String email;
     String endereco;
 }
