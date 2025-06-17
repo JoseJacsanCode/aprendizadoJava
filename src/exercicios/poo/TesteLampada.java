@@ -15,6 +15,8 @@ public class TesteLampada {
         lampada.tipos = new String[5];
         lampada.tipos[0] = "Abajur";
         lampada.tipos[1] = "Lampeões";
+
+        lampada.desligarLampada();
         
     }
 }

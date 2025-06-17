@@ -9,6 +9,15 @@ public class Lampada {
     int garantiaMeses;
     String[] tipos;
     boolean tipoAbajur;
+
+    void ligarLampada() {
+        System.out.println("A lâmpada está ligada.");
+        
+    }
+
+    void desligarLampada() {
+        System.out.println("A lampada está desligada.");
+    }
 }
 
 
