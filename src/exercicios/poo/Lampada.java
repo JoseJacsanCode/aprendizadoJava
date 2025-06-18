@@ -9,18 +9,34 @@ public class Lampada {
     int garantiaMeses;
     String[] tipos;
     boolean tipoAbajur;
+    boolean ligada;
 
-    void ligarLampada() {
-        System.out.println("A lâmpada está ligada.");
-        
+    void ligar() {
+        ligada = true;
     }
 
-    void desligarLampada() {
-        System.out.println("A lampada está desligada.");
+    void desligar() {
+        ligada = false;
+    }
+
+    void mostrarEstado() {
+        if(ligada) {
+            System.out.println("A lâmpada está ligada");
+        }
+        else {
+            System.out.println("A lâmpada está desligada");
+        }
+    }
+
+    void mudarEstado() {
+        if(ligada) {
+            desligar();
+        }
     }
 }
 
 
 /*
- * Escreva	uma	classe	para representar uma lâmpada	que	está à	venda	em um supermercado.
+ * Escreva uma classe para representar uma lâmpada 
+ * que está à venda em um supermercado.
  */
