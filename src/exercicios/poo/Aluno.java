@@ -2,22 +2,46 @@ package exercicios.poo;
 
 public class Aluno {
     String nome;
-    int matricula;
-    String curso;
-    String disciplina1, disciplina2, disciplina3;
-    double nota1, nota2, nota3;
+    String matricula;
+    String nomeCurso;
+    String[] nomeDisciplinas = new String[3];
+    double[][] notasDisciplinas = new double[3][4];
 
 
-    void aprovar() {
-        double media = (nota1 + nota2 + nota3) / 3;
-        if (media >= 7) {
-            System.out.printf("Nota: %.2f%n", media);
-            System.out.println("O aluno foi aprovado");
+    void mostrarInfos() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Matrícula: " + matricula);
+        System.out.println("Nome do curso: " + nomeCurso);
+
+        for(int i = 0; i < notasDisciplinas.length; i++) {
+            System.out.println("Notas da disciplina: " + i);
+            for(int j = 0; j < notasDisciplinas[i].length; j++) {
+                System.out.print(notasDisciplinas[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    boolean verificarAprovado(int indice) {
+        
+        double media = obterMedia(indice);
+        if(media >= 7) {
+            return true;
         }
         else {
-            System.out.printf("Nota: %.2f%n", media);
-            System.out.println("O aluno foi reprovado");
+            return false;
         }
+    }
+
+    double obterMedia(int indice) {
+        double soma = 0;
+        for(int i = 0; i < notasDisciplinas[indice].length; i++) {
+            soma += notasDisciplinas[indice][i];
+        }
+
+        double media = soma / 4;
+
+        return media;
     }
 
 }

@@ -6,24 +6,43 @@ public class TesteAluno {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
         Aluno aluno = new Aluno();
 
+        System.out.println("Entre com o nome do aluno: ");
         aluno.nome = sc.nextLine();
-        aluno.matricula = sc.nextInt();
-        sc.nextLine();
-        aluno.curso = sc.nextLine();
-        aluno.disciplina1 = sc.nextLine();
-        aluno.disciplina2 = sc.nextLine();
-        aluno.disciplina3 = sc.nextLine();
-        aluno.nota1 = sc.nextDouble();
-        aluno.nota2 = sc.nextDouble();
-        aluno.nota3 = sc.nextDouble();      
-        
-        System.out.println("Nota de " + aluno.disciplina1 + " = " + aluno.nota1);
-        System.out.println("Nota de " + aluno.disciplina2 + " = " + aluno.nota2);
-        System.out.println("Nota de " + aluno.disciplina3 + " = " + aluno.nota3);
-        
-        aluno.aprovar();
+
+        System.out.println("Entre com o nome do curso");
+        aluno.nomeCurso = sc.nextLine();
+
+        System.out.println("Entre com a matrícula: ");
+        aluno.matricula = sc.nextLine();
+
+        aluno.nomeDisciplinas = new String[3];
+        for(int i = 0; i < aluno.notasDisciplinas.length; i++) {
+            System.out.println("Entre com o nome da disciplina " + i);
+            aluno.nomeDisciplinas[i] = sc.next();
+        }
+
+        for(int i = 0; i < aluno.notasDisciplinas.length; i++) {
+            System.out.println("Obtendo notas de disciplina " + aluno.nomeDisciplinas[i]);
+            for(int j = 0; j < aluno.notasDisciplinas[i].length; j++) {
+                System.out.println("Entre com a nota: " + (j+1));
+                aluno.notasDisciplinas[i][j] = sc.nextDouble();
+            }
+        }
+
+        aluno.mostrarInfos();
+
+        for(int i = 0; i < aluno.nomeDisciplinas.length; i++) {
+            if(aluno.verificarAprovado(i)) {
+                System.out.println("Disciplina " + aluno.nomeDisciplinas[i] + " - foi aprovado.");
+            }
+            else {
+                System.out.println("Disciplina " + aluno.nomeDisciplinas[i] + " - foi reprovado.");
+            }
+
+        }
 
         sc.close();
     }
