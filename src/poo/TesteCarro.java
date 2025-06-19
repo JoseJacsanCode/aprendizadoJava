@@ -5,21 +5,20 @@ public class TesteCarro {
         Carro van = new Carro();
         van.marca = "Fiat";
         van.modelo = "Ducato";
-        van.numPassageiros = 10;
+        //van.numPassageiros = 10;
         van.capCombustivel = 100;
         van.consumoCombustivel = 0.2;
 
-        System.out.println("Marca: " + van.marca);
-        System.out.println("Modelo: " + van.modelo);
+        System.out.println(van.numPassageiros);
 
-        van.exibirAutonomia();
+        Carro van2 = new Carro("Fiat", "Ducato", 10, 100, 0.2);
 
-        double autonomiaDoCarro = van.obterAutonomia();
-        System.out.printf("A autonomia do carro é de: %.2f km%n", autonomiaDoCarro);
+        System.out.println(van2.marca);
+        System.out.println(van2.modelo);
+        System.out.println(van2.numPassageiros);
+        System.out.println(van2.capCombustivel);
+        System.out.println(van2.consumoCombustivel);
 
-        double qtdCombustivel10 = van.calcularCombustivel(10);
-        double qtdCombustivel15 = van.calcularCombustivel(15);
-        System.out.println("qtdCombustivel: " + qtdCombustivel10);
-        System.out.println("qtdCombustivel15: " + qtdCombustivel15);
+        Carro2 van3 = new Carro2();
     }
 }
