@@ -1,41 +1,42 @@
 package poo;
 
 public class Carro {
-    String marca;
-    String modelo;
-    int numPassageiros; // Número de passageiros
-    double capCombustivel; // Capacidade do tanque de combustível
-    double consumoCombustivel; // Consumo de combustível por km
-
-    Carro() {
-        numPassageiros = 4;
-        System.out.println("Classe carro foi instanciada");
-    }
-
-    Carro(String marca_, String modelo_, int numPassageiros_, double capCombustivel_, double consumoCombustivel_) {
-        marca = marca_;
-        modelo = modelo_;
-        numPassageiros = numPassageiros_;
-        capCombustivel = capCombustivel_;
-        consumoCombustivel = consumoCombustivel_;
-    }
-
-    // Método sem retorno
-    void exibirAutonomia() {
-        double autonomia = capCombustivel * consumoCombustivel;
-        System.out.printf("A autonomia do " + modelo + " é %.2f km%n", autonomia);
-    }
-
-    // Método com retorno
-    double obterAutonomia() {
-        double autonomiaObtida = capCombustivel * consumoCombustivel;
-        return autonomiaObtida;
-    }
-
-    // Método com parâmetro
-    double calcularCombustivel(double km) {
-        double qtdCombustivel = km / consumoCombustivel;
-        return qtdCombustivel;
-    }
+    private String marca;
+    private String modelo;
+    private int numPassageiros; // Número de passageiros
+    private double capCombustivel; // Capacidade do tanque de combustível
+    private double consumoCombustivel; // Consumo de combustível por km
     
+   
+    public String getMarca() {
+        return marca;
+    }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    public String getModelo() {
+        return modelo;
+    }
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    public int getNumPassageiros() {
+        return numPassageiros;
+    }
+    public void setNumPassageiros(int numPassageiros) {
+        this.numPassageiros = numPassageiros;
+    }
+    public double getCapCombustivel() {
+        return capCombustivel;
+    }
+    public void setCapCombustivel(double capCombustivel) {
+        this.capCombustivel = capCombustivel;
+    }
+    public double getConsumoCombustivel() {
+        return consumoCombustivel;
+    }
+    public void setConsumoCombustivel(double consumoCombustivel) {
+        this.consumoCombustivel = consumoCombustivel;
+    }
+
 }
