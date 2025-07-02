@@ -1,4 +1,4 @@
-package poo;
+package exercicios;
 
 public class CalculadoraRecursiva {
   

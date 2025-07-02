@@ -1,4 +1,4 @@
-package poo;
+package exercicios;
 
 public class TesteCalculadoraRecursiva {
     public static void main(String[] args) {
