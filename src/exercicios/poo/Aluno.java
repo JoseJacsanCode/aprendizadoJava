@@ -5,6 +5,14 @@ public class Aluno extends Pessoa {
     private String curso;
     private double[] notas;
 
+    public Aluno() {
+        super();
+    }
+
+    public Aluno(String nome, String endereco, String telefoneCelular, String cpf) {
+        super(nome, endereco, telefoneCelular, cpf);
+    }
+
     public String getCurso() {
         return curso;
     }

@@ -3,9 +3,20 @@ package exercicios.poo;
 public class Pessoa {
     private String nome;
     private String endereco;
-    private String telefone;
+    private String telefoneCelular;
     private String cpf;
+
+    public Pessoa() {
+        super();
+    }
     
+    public Pessoa(String nome, String endereco, String telefoneCelular, String cpf) {
+        super();
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefoneCelular = telefoneCelular;
+        this.cpf = cpf;
+    }
     public String getNome() {
         return nome;
     }
@@ -18,11 +29,11 @@ public class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public String getTelefone() {
-        return telefone;
+    public String getTelefoneCelular() {
+        return telefoneCelular;
     }
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setTelefoneCelular(String telefoneCelular) {
+        this.telefoneCelular = telefoneCelular;
     }
     public String getCpf() {
         return cpf;
