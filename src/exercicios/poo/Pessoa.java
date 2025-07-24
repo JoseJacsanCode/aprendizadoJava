@@ -42,6 +42,8 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+    // public abstract String obterEtiquetaEndereco();
     
+    // public abstract void imprimirEtiquetaEndereco();
 
 }

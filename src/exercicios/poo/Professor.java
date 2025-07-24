@@ -20,6 +20,18 @@ public class Professor extends Pessoa{
     public double calcularSalarioLiquido() {
         return 0;
     }
+
+    public String obterEtiquetaEndereco() {
+
+        String s ="Endereço do Professor ";
+        //s += super.getEndereco();
+        return s;
+    }
     
+    //@Override
+    public void imprimirEtiquetaEndereco() {
+        System.out.println("Imprimindo endereço do Professor");
+        System.out.println(this.obterEtiquetaEndereco());
+    }
 
 }

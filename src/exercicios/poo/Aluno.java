@@ -10,7 +10,7 @@ public class Aluno extends Pessoa {
     }
 
     public Aluno(String nome, String endereco, String telefoneCelular, String cpf) {
-        super(nome, endereco, telefoneCelular, cpf);
+        //super(nome, endereco, telefoneCelular, cpf);
     }
 
     public String getCurso() {
@@ -33,5 +33,18 @@ public class Aluno extends Pessoa {
     public boolean verificarAprovado() {
         return true;
     }
+
+    public String obterEtiquetaEndereco() {
+
+        String s ="Endereço do Aluno ";
+        //s += super.getEndereco();
+        return s;
+    }
+
+    //@Override
+    public void imprimirEtiquetaEndereco() {
+        System.out.println(this.obterEtiquetaEndereco());
+    }
+
 
 }
