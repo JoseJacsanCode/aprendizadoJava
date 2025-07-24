@@ -1,5 +1,7 @@
 package exercicios.poo;
 
+import java.util.Arrays;
+
 public class Aluno {
     
     private String curso;
@@ -44,6 +46,30 @@ public class Aluno {
     //@Override
     public void imprimirEtiquetaEndereco() {
         System.out.println(this.obterEtiquetaEndereco());
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno [curso=" + curso + ", notas=" + Arrays.toString(notas) + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Aluno other = (Aluno) obj;
+        if (curso == null) {
+            if (other.curso != null)
+                return false;
+        } else if (!curso.equals(other.curso))
+            return false;
+        if (!Arrays.equals(notas, other.notas))
+            return false;
+        return true;
     }
 
     // public String toString() {
