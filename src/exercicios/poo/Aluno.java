@@ -1,6 +1,6 @@
 package exercicios.poo;
 
-public class Aluno extends Pessoa {
+public class Aluno {
     
     private String curso;
     private double[] notas;
@@ -46,5 +46,15 @@ public class Aluno extends Pessoa {
         System.out.println(this.obterEtiquetaEndereco());
     }
 
+    // public String toString() {
+    //     String s = curso + "\n";
+    //     for(double nota : notas) {
+    //         s += nota + " ";
+    //     }
+
+    //     return s;
+    // }
+
+    
 
 }
